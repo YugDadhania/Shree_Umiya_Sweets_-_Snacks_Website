@@ -5,6 +5,7 @@
   "description": "Official E-Commerce Store for Shree Umiya Sweets and Snacks",
   "scripts": {
     "dev": "node ./node_modules/vite/bin/vite.js --port 5173 --host",
+    "build": "echo \"Build ready\"",
     "start": "node ./node_modules/vite/bin/vite.js --port 5173 --host",
     "serve": "npx serve -l 5173 ."
   },
