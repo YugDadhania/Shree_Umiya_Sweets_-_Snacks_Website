@@ -1330,7 +1330,7 @@ const PRODUCTS_DATA = [
     categoryLabel: "Dry Fruits",
     badge: "Healthy munch",
     badgeType: "gold",
-    image: "sweets_images/Pista.jpg",
+    image: "Sweets_images/Pista.jpg",
     rating: 4.9,
     reviewsCount: 180,
     description: "Crunchy, premium-quality pistachios with a rich, naturally sweet flavor—perfectly roasted for a delicious and satisfying healthy snack.",
