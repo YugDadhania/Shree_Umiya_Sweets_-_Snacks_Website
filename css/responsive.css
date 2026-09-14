@@ -571,15 +571,15 @@
   .main-header {
     width: 100%;
     max-width: 100%;
-    padding: 10px 0;
+    padding: 6px 0;
     overflow: hidden;
   }
 
   .header-inner {
     display: grid;
-    grid-template-columns: 36px minmax(0, 1fr) auto;
+    grid-template-columns: 44px 1fr 44px;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     width: 100%;
     max-width: 100%;
   }
@@ -610,21 +610,19 @@
     min-width: 0;
     width: 100%;
     max-width: 100%;
-    padding: 0 2px;
+    padding: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .logo-link {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     max-width: 100%;
-    width: 100%;
+    width: auto;
     text-decoration: none;
   }
 
@@ -637,10 +635,11 @@
   }
 
   .logo-frame-wrap .header-official-logo {
-    height: clamp(34px, 8.5vw, 46px);
+    height: clamp(54px, 14vw, 68px);
     width: auto;
     max-width: 100%;
     object-fit: contain;
+    display: block;
   }
 
   /* Mobile-Only: Hide Brand Name and Tagline text, keep ONLY the Umiya Logo */
@@ -652,11 +651,11 @@
   .header-right-col {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     gap: 4px;
     flex-shrink: 0;
-    min-width: 32px;
+    min-width: 0;
   }
 
   /* Arrange Account/Login icon above Search icon on mobile */
