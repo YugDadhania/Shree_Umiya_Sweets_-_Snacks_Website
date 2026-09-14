@@ -305,37 +305,31 @@
     <ul class="mobile-nav-list">
       <li class="mobile-nav-item">
         <a href="${homeLink}" class="mobile-nav-link" onclick="window.siteHeader.closeMobileDrawer()">
-          <i class="fas fa-home"></i>
           <span>Home</span>
         </a>
       </li>
       <li class="mobile-nav-item">
         <a href="${isHome ? '#about' : base + '#about'}" class="mobile-nav-link" onclick="window.siteHeader.closeMobileDrawer()">
-          <i class="fas fa-info-circle"></i>
           <span>About Us</span>
         </a>
       </li>
       <li class="mobile-nav-item">
         <a href="${isHome ? '#outlets' : base + '#outlets'}" class="mobile-nav-link" onclick="window.siteHeader.closeMobileDrawer()">
-          <i class="fas fa-store"></i>
           <span>Outlets</span>
         </a>
       </li>
       <li class="mobile-nav-item">
         <a href="${isHome ? '#reviews' : base + '#reviews'}" class="mobile-nav-link" onclick="window.siteHeader.closeMobileDrawer()">
-          <i class="fas fa-star"></i>
           <span>Testimonials</span>
         </a>
       </li>
       <li class="mobile-nav-item">
         <a href="${isHome ? '#bulk-orders' : base + '#bulk-orders'}" class="mobile-nav-link" onclick="window.siteHeader.closeMobileDrawer()">
-          <i class="fas fa-boxes"></i>
           <span>Bulk Orders</span>
         </a>
       </li>
       <li class="mobile-nav-item">
         <a href="${isHome ? '#contact' : base + '#contact'}" class="mobile-nav-link" onclick="window.siteHeader.closeMobileDrawer()">
-          <img src="${callImg}" alt="Call" class="call-icon-img">
           <span>Contact Us</span>
         </a>
       </li>
@@ -344,7 +338,6 @@
       <li class="mobile-nav-item mobile-category-accordion-wrapper">
         <div class="mobile-nav-divider"></div>
         <button class="mobile-nav-link mobile-category-main-toggle" id="mobileCatMainToggle" aria-expanded="false">
-          <i class="fas fa-th-large"></i>
           <span>Product Categories</span>
           <i class="fas fa-chevron-down mobile-accordion-arrow"></i>
         </button>

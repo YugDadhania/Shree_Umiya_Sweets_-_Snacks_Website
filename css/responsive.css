@@ -14,7 +14,7 @@
   width: 320px;
   max-width: 85%;
   height: 100%;
-  background: linear-gradient(180deg, #820D1D 0%, #5E0815 50%, #42040E 100%);
+  background-color: #E8D4B0;
   border-right: 2.5px solid var(--gold-primary);
   box-shadow: 10px 0 40px rgba(0, 0, 0, 0.55);
   z-index: 9999;
@@ -29,7 +29,7 @@
 }
 
 .mobile-drawer-header {
-  background: rgba(0, 0, 0, 0.35);
+  background: #42040E;
   padding: 20px 18px;
   border-bottom: 2px solid var(--gold-primary);
   display: flex;
@@ -73,9 +73,11 @@
 }
 
 .close-mobile-drawer-btn {
-  color: #FFFFFF;
+
+  background: var(--gold-primary);
+  color: #42040E;
+  /* color: #FFFFFF; */
   font-size: 1.2rem;
-  background: rgba(255, 255, 255, 0.12);
   border: 1.5px solid rgba(212, 175, 55, 0.5);
   width: 36px;
   height: 36px;
@@ -89,8 +91,8 @@
 }
 
 .close-mobile-drawer-btn:hover {
-  background: var(--gold-primary);
-  color: #42040E;
+  color: #FFFFFF;
+  background-color: #E8D4B0;
   border-color: var(--gold-light);
   transform: rotate(90deg);
 }
@@ -115,7 +117,7 @@
   padding: 15px 24px;
   font-size: 1.02rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color:#42040E;
   text-decoration: none;
   border-bottom: 1px solid rgba(212, 175, 55, 0.12);
   border-left: 4px solid transparent;
@@ -134,8 +136,8 @@
 /* Gold Accents for Hover Effects */
 .mobile-nav-link:hover,
 .mobile-nav-link:focus {
-  color: var(--gold-light);
-  background: linear-gradient(90deg, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.05) 100%);
+  color: #E8D4B0;
+  background-color: #42040E;
   border-left: 4px solid var(--gold-primary);
   padding-left: 28px;
   box-shadow: inset 4px 0 14px rgba(212, 175, 55, 0.25);
@@ -157,7 +159,8 @@
 }
 
 .mobile-category-main-toggle {
-  background: rgba(0, 0, 0, 0.2);
+  background: #42040E;
+  color: #FFFFFF;
   border: none;
   width: 100%;
   cursor: pointer;
@@ -166,19 +169,26 @@
   justify-content: space-between;
 }
 
+.mobile-category-main-toggle:hover,
+.mobile-category-main-toggle:focus,
+.mobile-category-main-toggle.active {
+  color: #E8D4B0;
+}
+
 .mobile-category-main-toggle .mobile-accordion-arrow {
   font-size: 0.8rem;
-  color: var(--gold-light);
+  color: var(--gold-primary);
   margin-left: auto;
   transition: transform 0.25s ease;
 }
 
 .mobile-category-main-toggle.active .mobile-accordion-arrow {
   transform: rotate(180deg);
+  color: var(--gold-light);
 }
 
 .mobile-categories-accordion-body {
-  background: rgba(0, 0, 0, 0.25);
+  background: #42040E;
   border-left: 3px solid var(--gold-primary);
   margin: 4px 12px 12px 18px;
   border-radius: 4px;
@@ -192,7 +202,8 @@
 .mobile-subcat-header {
   width: 100%;
   padding: 12px 14px;
-  min-height: 44px; /* Touch-friendly tap target */
+  min-height: 44px;
+  /* Touch-friendly tap target */
   background: transparent;
   border: none;
   color: #FFFFFF;
@@ -226,7 +237,8 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  background: #FFFFFF; /* White panel */
+  background: #FFFFFF;
+  /* White panel */
   border-top: 3px solid #D4AF37;
 }
 
@@ -239,9 +251,11 @@
   display: flex;
   align-items: center;
   padding: 10px 18px;
-  min-height: 44px; /* Touch-friendly tap target (min 44px) */
+  min-height: 44px;
+  /* Touch-friendly tap target (min 44px) */
   line-height: 1.5;
-  color: #B91C1C; /* Maroon text */
+  color: #B91C1C;
+  /* Maroon text */
   font-size: 0.92rem;
   font-weight: 500;
   text-decoration: none;
@@ -252,8 +266,10 @@
 .mobile-subcat-list .mobile-sub-link:hover,
 .mobile-subcat-list .mobile-sub-link:focus,
 .mobile-subcat-list .mobile-sub-link.active {
-  background-color: #D4AF37; /* Gold background */
-  color: #B91C1C; /* Maroon text */
+  background-color: #D4AF37;
+  /* Gold background */
+  color: #B91C1C;
+  /* Maroon text */
   font-weight: 700;
   padding-left: 24px;
 }
@@ -262,7 +278,7 @@
 .mobile-drawer-contact {
   margin-top: auto;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.35);
+  background:#42040E;
   border-top: 1.5px solid var(--gold-primary);
   font-size: 0.82rem;
   flex-shrink: 0;
@@ -516,7 +532,9 @@
 
 /* Mobile Devices (Max 768px) */
 @media (max-width: 768px) {
-  html, body {
+
+  html,
+  body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -524,7 +542,9 @@
     box-sizing: border-box;
   }
 
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
@@ -1252,7 +1272,7 @@
     max-width: 100%;
   }
 
-  .footer-top-grid > * {
+  .footer-top-grid>* {
     min-width: 0;
     width: 100%;
     max-width: 100%;
@@ -1316,4 +1336,3 @@
     max-width: 100%;
   }
 }
-
