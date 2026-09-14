@@ -622,13 +622,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     max-width: 100%;
     width: 100%;
+    text-decoration: none;
   }
 
   .logo-frame-wrap {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     max-width: 100%;
+    line-height: 0;
   }
 
   .logo-frame-wrap .header-official-logo {
@@ -638,47 +643,10 @@
     object-fit: contain;
   }
 
-  .shop-name-title {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    gap: clamp(2px, 1.2vw, 6px);
-    padding: 2px 2px;
-    margin: 2px auto 1px auto;
-    max-width: 100%;
-    width: auto;
-  }
-
-  .shop-name-title .title-shree,
-  .shop-name-title .title-suffix {
-    font-size: clamp(0.52rem, 1.6vw, 0.68rem);
-    letter-spacing: clamp(0.2px, 0.6vw, 0.8px);
-    flex-shrink: 1;
-  }
-
-  .shop-name-title .title-umiya {
-    display: inline-flex;
-    align-items: center;
-    flex-shrink: 0;
-  }
-
-  .shop-name-title .title-umiya .header-official-logo {
-    height: clamp(18px, 4.8vw, 26px);
-    width: auto;
-    max-width: clamp(65px, 20vw, 95px);
-    object-fit: contain;
-  }
-
+  /* Mobile-Only: Hide Brand Name and Tagline text, keep ONLY the Umiya Logo */
+  .shop-name-title,
   .shop-tagline-text {
-    font-size: clamp(0.55rem, 1.6vw, 0.68rem);
-    letter-spacing: 0.2px;
-    margin-top: 1px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
+    display: none !important;
   }
 
   .header-right-col {
