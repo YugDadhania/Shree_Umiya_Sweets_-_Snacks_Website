@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shree Umiya Sweets and Snacks | The Real Taste of Indian Sweets</title>
+  <meta name="description"
+    content="Official online store of Shree Umiya Sweets and Snacks. Handcrafted authentic Gujarati mithai, fresh namkeens, festive gift hampers, live snacks and pure dairy delights in Surat.">
+  <link rel="icon" type="image/png" href="Sweets_images/UMIYA_LOGO_page-0001-removebg-preview (1).png">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core & Responsive Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Structured Data: Store Locations & Geo Coordinates -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Bakery",
+        "@id": "https://shreeumiyasweets.com/#althan-branch",
+        "name": "Shree Umiya Sweets and Snacks - Althan Branch / VIP Galleria Branch",
+        "description": "VIP Galleria, Althan",
+        "telephone": "+917878162112",
+        "openingHours": "Mo-Su 08:00-22:00",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Shop No. B-12, VIP Galleria, Althan-Bhimrad Canal Road, Althan",
+          "addressLocality": "Surat",
+          "postalCode": "395007",
+          "addressRegion": "Gujarat",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 21.1441,
+          "longitude": 72.7885
+        },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=Shree+Umiya+Sweets+and+Snacks+B-12+VIP+Galleria+Althan+Surat"
+      },
+      {
+        "@type": "Bakery",
+        "@id": "https://shreeumiyasweets.com/#pandesara-branch",
+        "name": "Shree Umiya Sweets and Snacks - Pandesara Branch / Chikuwadi Branch",
+        "description": "Avirbhav Society, Pandesara",
+        "telephone": "+919879162112",
+        "openingHours": "Mo-Su 07:00-22:00",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Shop No. S-9/10, Avirbhav Society-1, G.H.B. Main Road, Opp. Chikuwadi, Pandesara",
+          "addressLocality": "Surat",
+          "postalCode": "394221",
+          "addressRegion": "Gujarat",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 21.1397,
+          "longitude": 72.8286
+        },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=Shree+Umiya+Sweets+and+Snacks+S-9%2F10+Avirbhav+Society+Pandesara+Surat"
+      },
+      {
+        "@type": "Bakery",
+        "@id": "https://shreeumiyasweets.com/#dindoli-branch",
+        "name": "Shree Umiya Sweets and Snacks - Dindoli Branch",
+        "description": "Uma Plaza, Dindoli",
+        "telephone": "+919925862112",
+        "openingHours": "Mo-Su 07:00-22:00",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Shop No. 1, 1-23, Uma Plaza, Near HP Petrol Pump, Dindoli Kharwasa Main Road, Dindoli",
+          "addressLocality": "Surat",
+          "postalCode": "394210",
+          "addressRegion": "Gujarat",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 21.1593,
+          "longitude": 72.8762
+        },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=Shree+Umiya+Sweets+and+Snacks+Uma+Plaza+Dindoli+Surat"
+      }
+    ]
+  }
+  </script>
+  <script src="js/header.js"></script>
+</head>
+
+<body>
+
+
+
+  <!-- ==========================================================================
+       SHARED REUSABLE MASTER HEADER COMPONENT
+       ========================================================================== -->
+  <site-header></site-header>
+
+  <!-- ==========================================================================
+       1. HERO SECTION (PRODUCT SHOWCASE CAROUSEL)
+       ========================================================================== -->
+  <section class="hero-carousel-section" id="home" aria-label="Hero Product Carousel">
+    <div class="hero-carousel-container" id="heroCarouselContainer">
+
+      <!-- Slide 1: Pure Heritage Indian Sweets -->
+      <div class="hero-carousel-slide active" data-slide="0">
+        <div class="hero-slide-bg" style="background-image: url('images/hero_banner.jpg');"></div>
+        <div class="hero-slide-overlay"></div>
+        <div class="container hero-slide-content-wrap">
+          <div class="hero-slide-grid">
+            <div class="hero-slide-text">
+              <div class="hero-slide-badge">
+                <i class="fas fa-sparkles"></i>
+                <span>Pure Vegetarian · Handcrafted Daily Since Generations</span>
+              </div>
+              <h1 class="hero-slide-title">
+                The Pure Heritage of
+                <span class="gold-text">Authentic Indian Sweets</span>
+              </h1>
+              <p class="hero-slide-desc">
+                Honoring decades of culinary mastery in Surat. Every sweet is slow-cooked in 100% pure desi cow ghee
+                with traditional recipes passed down through generations—bringing divine aroma and authentic sweet joy
+                to your family.
+              </p>
+              <div class="hero-slide-actions">
+                <a href="#menu" class="btn btn-gold" onclick="window.app.setCategory('sweets')">
+                  <i class="fas fa-shopping-basket"></i> Explore Sweets Menu
+                </a>
+                <button class="btn btn-outline-gold" onclick="window.app.orderOnWhatsApp('kaju-katli')">
+                  <i class="fab fa-whatsapp"></i> WhatsApp Order
+                </button>
+              </div>
+            </div>
+
+            <div class="hero-slide-preview">
+              <div class="hero-preview-frame">
+                <img src="Sweets_images/Mix_mithai_thali.jpg" alt="Authentic Pure Ghee Indian Sweets"
+                  class="hero-preview-img">
+                <div class="hero-floating-glass-badge">
+                  <div>
+                    <!-- <div class="float-badge-title">Royal Gifting Collection </div>
+                    <div class="float-badge-sub">100% Pure Desi Ghee Preparation</div> -->
+                  </div>
+                  <!-- <button class="btn btn-gold" style="padding: 6px 14px; font-size: 0.78rem;"
+                    onclick="window.app.setCategory('hampers')">
+                    
+                  </button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Surat Morning Live Snacks & Namkeens -->
+      <div class="hero-carousel-slide" data-slide="1">
+        <div class="hero-slide-bg" style="background-image: url('images/hero_banner.jpg');"></div>
+        <div class="hero-slide-overlay"></div>
+        <div class="container hero-slide-content-wrap">
+          <div class="hero-slide-grid">
+            <div class="hero-slide-text">
+              <div class="hero-slide-badge">
+                <i class="fas fa-fire"></i>
+                <span>Hot Desi Ghee Jalebi & Surati Farsan</span>
+              </div>
+              <h2 class="hero-slide-title">
+                Crispy, Piping Hot
+                <span class="gold-text">Live Morning Snacks</span>
+              </h2>
+              <p class="hero-slide-desc">
+                Start your day the authentic Surati way! Golden, crunchy jalebis fried live in pure desi cow ghee,
+                paired with fluffy nylon khaman, hot samosas, and crunchy Bhavnagari gathiya delivered hot to your
+                doorstep.
+              </p>
+              <div class="hero-slide-actions">
+                <a href="#menu" class="btn btn-gold" onclick="window.app.setCategory('live-snacks')">
+                  <i class="fas fa-utensils"></i> Order Live Snacks
+                </a>
+                <a href="#menu" class="btn btn-outline-gold" onclick="window.app.setCategory('namkeens')">
+                  <i class="fas fa-cookie"></i> Browse Namkeens
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-slide-preview">
+              <div class="hero-preview-frame">
+                <img src="Sweets_images/Jalebi.jpg" alt="Hot Desi Ghee Jalebi Live Counter" class="hero-preview-img">
+                <div class="hero-floating-glass-badge">
+                  <div>
+                    <!-- <div class="float-badge-title">Fresh Batches Daily 🥨</div>
+                    <div class="float-badge-sub">60-90 Min Surat Home Delivery</div> -->
+                  </div>
+                  <!-- <button class="btn btn-gold" style="padding: 6px 14px; font-size: 0.78rem;"
+                    onclick="window.app.setCategory('live-snacks')">
+                    Order
+                  </button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Imperial Festive Mithai & Hampers -->
+      <div class="hero-carousel-slide" data-slide="2">
+        <div class="hero-slide-bg" style="background-image: url('images/hero_banner.jpg');"></div>
+        <div class="hero-slide-overlay"></div>
+        <div class="container hero-slide-content-wrap">
+          <div class="hero-slide-grid">
+            <div class="hero-slide-text">
+              <div class="hero-slide-badge">
+                <i class="fas fa-gift"></i>
+                <span>Wedding & Corporate Gifting Solutions</span>
+              </div>
+              <h2 class="hero-slide-title">
+                Royal Festive Mithai &
+                <span class="gold-text">Dry Fruit Gift Boxes</span>
+              </h2>
+              <p class="hero-slide-desc">
+                Elevate your auspicious occasions and corporate partnerships. Hand-selected California almonds, W240
+                cashews, and rich silver-coated Kaju Katli curated in bespoke gold-embossed celebration hampers.
+              </p>
+              <div class="hero-slide-actions">
+                <a href="#menu" class="btn btn-gold" onclick="window.app.setCategory('hampers')">
+                  <i class="fas fa-box-open"></i> Browse Hampers
+                </a>
+                <a href="#bulk-orders" class="btn btn-outline-gold">
+                  <i class="fas fa-handshake"></i> Bulk Inquiries
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-slide-preview">
+              <div class="hero-preview-frame">
+                <img src="Sweets_images/Kaju_katli.jpg" alt="Royal Cashew Diamond Fudge Gift Box"
+                  class="hero-preview-img">
+                <div class="hero-floating-glass-badge">
+                  <!-- <div>
+                    <div class="float-badge-title">Custom Logo Branding </div>
+                    <div class="float-badge-sub">Corporate & Wedding Orders</div>
+                  </div> -->
+                  <!-- <button class="btn btn-gold" style="padding: 6px 14px; font-size: 0.78rem;"
+                    onclick="window.app.setCategory('hampers')">
+                    Custom
+                  </button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="hero-carousel-arrow prev" id="heroPrevBtn" aria-label="Previous Slide">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="hero-carousel-arrow next" id="heroNextBtn" aria-label="Next Slide">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Carousel Indicators / Dots -->
+      <div class="hero-carousel-dots" id="heroDots">
+        <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
+        <button class="hero-dot" data-index="1" aria-label="Slide 2"></button>
+        <button class="hero-dot" data-index="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       2. INTRODUCTION SECTION ("WE SERVE...")
+       ========================================================================== -->
+  <section class="intro-section" id="intro">
+    <div class="container">
+      <div class="intro-grid">
+        <!-- Left: Text Block -->
+        <div class="intro-text-col">
+          <span class="intro-pretitle">The Sacred Tradition of Surat</span>
+          <h2 class="intro-title">We serve authentic Gujarati tradition, handcrafted with 100% pure desi cow ghee.</h2>
+          <p class="intro-lead-text">
+            At Shree Umiya Sweets and Snacks, we believe that Indian mithai is not merely a delicacy—it is an auspicious
+            offering of love, a cherished celebration of Gujarat's rich culinary roots, and an enduring symbol of
+            togetherness.
+          </p>
+
+          <div class="intro-pillars-grid">
+            <div class="intro-pillar-card">
+              <i class="fas fa-leaf"></i>
+              <div>
+                <h5>100% Desi Ghee</h5>
+                <p>Pure ghee preparation with zero chemical adulteration or palm oil.</p>
+              </div>
+            </div>
+            <div class="intro-pillar-card">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h5>Fresh Morning Batches</h5>
+                <p>Mawa, pedas, and live snacks crafted fresh every single morning.</p>
+              </div>
+            </div>
+            <div class="intro-pillar-card">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                <h5>Hygienic Modern Kitchen</h5>
+                <p>Strict FSSAI certified food safety standards and untouched packing.</p>
+              </div>
+            </div>
+            <div class="intro-pillar-card">
+              <i class="fas fa-shipping-fast"></i>
+              <div>
+                <h5>Express Surat Delivery</h5>
+                <p>Guaranteed 60-90 minute doorstep delivery across all Surat areas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+            <a href="#about" class="btn btn-primary">
+              <i class="fas fa-book-open"></i> Learn More About Us
+            </a>
+            <a href="#outlets" class="btn btn-outline-gold"
+              style="color: var(--primary-deep-maroon); border-color: var(--gold-primary);">
+              <i class="fas fa-store"></i> Visit Our Outlets
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: High-Quality Imagery -->
+        <div class="intro-image-col">
+          <div class="intro-visual-frame">
+            <img src="Sweets_images/Luxury_sweet_box.jpg" alt="Handcrafted Kaju Katli Sweets" class="intro-img">
+            <div class="intro-experience-badge">
+              <span class="num">30+</span>
+              <span>Years of Purity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==========================================================================
+       4. CATEGORY SHOWCASE (4 MAIN CATEGORIES GRID)
+       ========================================================================== -->
+  <!-- <section class="category-showcase-section" id="categories">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-pretitle">Handcrafted Delicacies</span>
+        <h2 class="section-main-title">Explore by Category</h2>
+        <p class="section-subtitle">Discover our artisanal specialties organized into 4 core culinary domains.</p>
+        <div class="ornament-divider">
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+
+      <div class="category-4-grid"> -->
+  <!-- 1. Traditional Sweets -->
+  <!-- <div class="category-4-card" onclick="window.app.setCategory('sweets')">
+          <div class="category-4-circle-wrap">
+            <img src="images/cat-sweets.png" alt="Traditional Indian Sweets" class="category-4-img">
+          </div>
+          <h3 class="category-4-title">Traditional Sweets</h3>
+          <p class="category-4-desc">Pure desi ghee Kaju Katli, Kesar Penda, Bengali Rasgulla & rich mawa specialties.
+          </p>
+          <span class="category-4-explore-btn">
+            Explore Sweets <i class="fas fa-arrow-right"></i>
+          </span>
+        </div> -->
+
+  <!-- 2. Surati Namkeens -->
+  <!-- <div class="category-4-card" onclick="window.app.setCategory('namkeens')">
+          <div class="category-4-circle-wrap">
+            <img src="images/cat-snacks.png" alt="Surati Namkeens & Farsan" class="category-4-img">
+          </div>
+          <h3 class="category-4-title">Surati Namkeens</h3>
+          <p class="category-4-desc">Authentic Surati Gathiya, crunchy Nylon Sev, Ratlami spicy sev & special mixture
+            farsan.</p>
+          <span class="category-4-explore-btn">
+            Explore Namkeens <i class="fas fa-arrow-right"></i>
+          </span>
+        </div> -->
+
+  <!-- 3. Live Hot Snacks -->
+  <!-- <div class="category-4-card" onclick="window.app.setCategory('live-snacks')">
+          <div class="category-4-circle-wrap">
+            <img src="images/cat-live-snacks.png" alt="Live Hot Snacks" class="category-4-img">
+          </div>
+          <h3 class="category-4-title">Live Hot Snacks</h3>
+          <p class="category-4-desc">Crispy Desi Ghee Jalebi, Surati Nylon Khaman, Fafda with raw papaya chutney &
+            Samosa.</p>
+          <span class="category-4-explore-btn">
+            Explore Live Snacks <i class="fas fa-arrow-right"></i>
+          </span>
+        </div> -->
+
+  <!-- 4. Festive Gift Hampers -->
+  <!-- <div class="category-4-card" onclick="window.app.setCategory('hampers')">
+          <div class="category-4-circle-wrap">
+            <img src="images/cat-bakery.png" alt="Festive Gift Hampers" class="category-4-img">
+          </div>
+          <h3 class="category-4-title">Festive Hampers</h3>
+          <p class="category-4-desc">Bespoke celebration gift boxes, wedding sweet packs & premium California dry
+            fruits.</p>
+          <span class="category-4-explore-btn">
+            Explore Hampers <i class="fas fa-arrow-right"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ==========================================================================
+       5. NEW ARRIVALS SECTION (LARGE BACKGROUND IMAGERY & PROMOTIONAL ITEMS)
+       ========================================================================== -->
+  <section class="new-arrivals-section" id="new-arrivals">
+    <div class="container">
+      <div class="new-arrivals-header-wrap">
+        <div class="new-arrivals-pill">
+          <i class="fas fa-star"></i>
+          <span>SEASONAL HIGHLIGHTS & NEW LAUNCHES</span>
+        </div>
+        <h2 class="new-arrivals-title">
+          Best Sellers & <span>Exclusive New Arrivals</span>
+        </h2>
+        <p class="new-arrivals-desc">
+          Crafted in small limited batches with prized Kashmiri saffron, royal Iranian pistachios, and Ayurvedic winter
+          herbs cooked in pure cow ghee.
+        </p>
+      </div>
+
+      <div class="new-arrivals-grid">
+        <!-- New Arrival 1: Winter Adadiya Pak -->
+        <div class="new-arrival-card">
+          <div class="new-arrival-img-box">
+            <img src="Sweets_images/Exotica.jpg" alt="Winter Special Adadiya Pak" class="new-arrival-img"
+              loading="lazy">
+            <span class="new-arrival-badge">New Arrival</span>
+          </div>
+          <div class="new-arrival-body">
+            <h3 class="new-arrival-item-title">Chocolate Exotica</h3>
+            <p class="new-arrival-item-desc">
+              A luxurious assortment of rich, indulgent chocolates crafted with premium ingredients—perfectly smooth,
+              delicious, and made for every special celebration
+            </p>
+            <div class="new-arrival-footer">
+              <span class="new-arrival-price">₹580 <small style="font-size: 0.75rem; color: rgba(255,255,255,0.7);">/
+                  500g</small></span>
+              <button class="btn btn-gold" style="padding: 6px 14px; font-size: 0.8rem;"
+                onclick="window.app.openQuickView('winter-adadiya-pak')">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Arrival 2: Anjeer Patra (Sugar Free) -->
+        <div class="new-arrival-card">
+          <div class="new-arrival-img-box">
+            <img src="Sweets_images/rose-balls.jpg" alt="Sugar Free Anjeer Patra" class="new-arrival-img"
+              loading="lazy">
+            <span class="new-arrival-badge">Best Sellers</span>
+          </div>
+          <div class="new-arrival-body">
+            <h3 class="new-arrival-item-title">Rose Balls</h3>
+            <p class="new-arrival-item-desc">
+              Delightful, melt-in-your-mouth rose-flavored pedas dotted with crunchy pistachios—a classic favorite with
+              a delicate floral aroma.
+            </p>
+            <div class="new-arrival-footer">
+              <span class="new-arrival-price">₹640 <small style="font-size: 0.75rem; color: rgba(255,255,255,0.7);">/
+                  500g</small></span>
+              <button class="btn btn-gold" style="padding: 6px 14px; font-size: 0.8rem;"
+                onclick="window.app.openQuickView('sugarfree-anjeer-patra')">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Arrival 3: Surat Famous Cold Cocoa -->
+        <div class="new-arrival-card">
+          <div class="new-arrival-img-box">
+            <img src="Sweets_images/hamper.jpg" alt="Surat Famous Cold Cocoa" class="new-arrival-img" loading="lazy">
+            <span class="new-arrival-badge">Must Try</span>
+          </div>
+          <div class="new-arrival-body">
+            <h3 class="new-arrival-item-title">Dry Fruit Hampers</h3>
+            <p class="new-arrival-item-desc">
+              Premium selection of fresh nuts—almonds, pistachios, cashews, and walnuts—elegantly packed for gifting.
+            </p>
+            <div class="new-arrival-footer">
+              <span class="new-arrival-price">₹1400 <small style="font-size: 0.75rem; color: rgba(255,255,255,0.7);">
+                </small></span>
+              <button class="btn btn-gold" style="padding: 6px 14px; font-size: 0.8rem;"
+                onclick="window.app.openQuickView('choc-cold-cocoa')">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. CONTENT BLOCKS (ALTERNATING IMAGE & TEXT SECTIONS)
+       ========================================================================== -->
+  <section class="content-blocks-section" id="about">
+    <div class="container">
+
+      <!-- Block 1: Check Out Our Outlets (Text Left, Visuals Right) -->
+      <div class="alternating-block" id="outlets">
+        <div class="block-text-col">
+          <span class="block-pretitle">Visit Us in Surat</span>
+          <h2 class="block-title">Check Out Our 3 Surat Outlets</h2>
+          <p class="block-desc">
+            Experience the divine aroma of boiling pure ghee and fresh spices in person! Each of our 3 flagship outlets
+            offers live counters, fresh sweet tasting lounges, and dedicated gift packing desks.
+          </p>
+
+          <div class="block-outlets-grid">
+            <div class="outlet-mini-card" data-branch="althan" data-lat="21.1441" data-lng="72.7885"
+              data-phone="7878162112" itemscope itemtype="https://schema.org/Bakery">
+              <meta itemprop="latitude" content="21.1441">
+              <meta itemprop="longitude" content="72.7885">
+              <h5 itemprop="name">Althan Branch:</h5>
+              <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><i
+                  class="fas fa-map-marker-alt"></i> <span itemprop="streetAddress">Shop No. B-12, VIP Galleria,
+                  Althan-Bhimrad Canal Road</span>, <span itemprop="addressLocality">Althan, Surat</span> – <span
+                  itemprop="postalCode">395007</span></p>
+              <p><i class="fas fa-clock"></i> <span itemprop="openingHours">8:00 AM – 10:00 PM</span></p>
+              <p><img src="Sweets_images/call3.png" alt="Call" class="call-icon-img"> <a href="tel:+917878162112"
+                  itemprop="telephone" style="color: inherit; text-decoration: none;">+91 78781 62112</a></p>
+              <a href="https://www.google.com/maps/dir//5SG6%2BC9C+Umiya+Sweets+%26+Snacks,+VIP+Galleria,+Canal+Rd,+Vip+Road,+Surat,+Gujarat+395007/@21.1512347,72.7865719,15z/data=!4m17!1m8!3m7!1s0x3be04dd7d4677a63:0x39570d16dfb0df2e!2sUmiya+Sweets+%26+Snacks!8m2!3d21.1441388!4d72.7885279!15sCkVTaHJlZSBVbWl5YSBTd2VldHMgYW5kIFNuYWNrcyB2aXAgR2FsbGVyaWEgQWx0aGFuIFN1cmF0SAQtY2FuZHlfY29mZmVlAQA!16s%2Fg%2F11n88yyd7c!4m7!1m0!1m5!1m1!1s0x3be04dd7d4677a63:0x39570d16dfb0df2e!2m2!1d72.7885568!2d21.1441363?entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" rel="noopener noreferrer" class="outlet-dir-link" itemprop="hasMap">
+                Get Directions <i class="fas fa-chevron-right"></i>
+              </a>
+            </div>
+
+            <div class="outlet-mini-card" data-branch="pandesara" data-lat="21.1397" data-lng="72.8286"
+              data-phone="9879162112" itemscope itemtype="https://schema.org/Bakery">
+              <meta itemprop="latitude" content="21.1397">
+              <meta itemprop="longitude" content="72.8286">
+              <h5 itemprop="name">Pandesara Branch:</h5>
+              <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><i
+                  class="fas fa-map-marker-alt"></i> <span itemprop="streetAddress">Shop No. S-9/10, Avirbhav Society-1,
+                  G.H.B. Main Road, Opp. Chikuwadi</span>, <span itemprop="addressLocality">Pandesara, Surat</span> –
+                <span itemprop="postalCode">394221</span>
+              </p>
+              <p><i class="fas fa-clock"></i> <span itemprop="openingHours">7:00 AM – 10:00 PM</span></p>
+              <p><img src="Sweets_images/call3.png" alt="Call" class="call-icon-img"> <a href="tel:+919879162112"
+                  itemprop="telephone" style="color: inherit; text-decoration: none;">+91 98791 62112</a></p>
+              <a href="https://www.google.com/maps/dir//5R2Q%2BC2F+Umiya+Farsan+%26+Sweets,+Opposite+Chikuwadi,+Aveerbhav+Society+1,+Pandesara,+Udhana,+Surat,+Gujarat+394221/@21.1510506,72.8185067,15z/data=!4m17!1m8!3m7!1s0x3be051b81673d705:0x3a6b2a693b0b5371!2sUmiya+Farsan+%26+Sweets!8m2!3d21.1510506!4d72.8375611!15sCkVTaHJlZSBVbWl5YSBTd2VldHMgYW5kIFNuYWNrcyBTLTkvMTAgQXZpcmJoYXYgU29jaWV0eSBQYW5kZXNhcmEgU3VyYXSSAQtjYW5keV9zdG9yZeABAA!16s%2Fg%2F11g4b9pl77!4m7!1m0!1m5!1m1!1s0x3be051b81673d705:0x3a6b2a693b0b5371!2m2!1d72.8375739!2d21.151051?entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" rel="noopener noreferrer" class="outlet-dir-link" itemprop="hasMap">
+                Get Directions <i class="fas fa-chevron-right"></i>
+              </a>
+            </div>
+
+            <div class="outlet-mini-card" data-branch="dindoli" data-lat="21.1593" data-lng="72.8762"
+              data-phone="9925862112" itemscope itemtype="https://schema.org/Bakery">
+              <meta itemprop="latitude" content="21.1593">
+              <meta itemprop="longitude" content="72.8762">
+              <h5 itemprop="name">Dindoli Branch:</h5>
+              <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><i
+                  class="fas fa-map-marker-alt"></i> <span itemprop="streetAddress">Shop No. 1-2-3, Uma Plaza, Near HP
+                  Petrol Pump, Dindoli Kharwasa Main Road</span>, <span itemprop="addressLocality">Dindoli, Surat</span>
+                – <span itemprop="postalCode">394210</span></p>
+              <p><i class="fas fa-clock"></i> <span itemprop="openingHours">7:00 AM – 10:00 PM</span></p>
+              <p><img src="Sweets_images/call3.png" alt="Call" class="call-icon-img"> <a href="tel:+919925862112"
+                  itemprop="telephone" style="color: inherit; text-decoration: none;">+91 99258 62112</a></p>
+              <a href="https://www.google.com/maps/dir//Shree+Umiya+sweet+snacksand+Dairy,+Uma+plaza,+Kharvasa+-+Dindoli+Rd,+Dindoli,+Karadva,+Surat,+Gujarat+394210/@21.1412904,72.8418522,14z/data=!4m17!1m8!3m7!1s0x3be05011365a1c3f:0x5279529ae5a4a2d1!2sShree+Umiya+sweet+snacksand+Dairy!8m2!3d21.1426985!4d72.8813425!15sCjVTaHJlZSBVbWl5YSBTd2VldHMgYW5kIFNuYWNrcyBVbWEgUGxhemEgRGluZG9saSBTdXJhdFo3IjVzaHJlZSB1bWl5YSBzd2VldHMgYW5kIHNuYWNrcyB1bWEgcGxhemEgZGluZG9saSBzdXJhdJIBDmljZV9jcmVhbV9zaG9w4AEA!16s%2Fg%2F11f4qxkmwl!4m7!1m0!1m5!1m1!1s0x3be05011365a1c3f:0x5279529ae5a4a2d1!2m2!1d72.8813425!2d21.1426985?entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" rel="noopener noreferrer" class="outlet-dir-link" itemprop="hasMap">
+                Get Directions <i class="fas fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="block-media-col">
+          <div class="block-media-wrap">
+            <img src="Sweets_images/sweet-with-dryfruit.jpg" alt="Shree Umiya Sweets Store Display"
+              class="block-media-img">
+          </div>
+        </div>
+      </div>
+
+      <!-- Block 2: Testimonials (Image Left, Reviews Right - REVERSE) -->
+      <div class="alternating-block reverse" id="reviews">
+        <div class="block-text-col">
+          <span class="block-pretitle">Loved Across Gujarat</span>
+          <h2 class="block-title">What Our Customers Say</h2>
+          <p class="block-desc">
+            With over 15,000+ festival celebration orders delivered annually across Surat, our commitment to 100% pure
+            desi ghee speaks for itself.
+          </p>
+
+          <div class="block-testimonials-list">
+            <div class="testimonial-mini-card">
+              <div class="test-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="test-quote">
+                "The Kaju Katli and Kesar Penda from Shree Umiya are unbeatable in Surat. You can instantly smell the
+                aroma of pure desi cow ghee. We ordered 80 gift hampers for our wedding and every guest loved them!"
+              </p>
+              <div class="test-user">
+                Rameshbhai Patel <span>· Vesu, Surat (Verified Buyer)</span>
+              </div>
+            </div>
+
+            <div class="testimonial-mini-card">
+              <div class="test-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="test-quote">
+                "Sunday morning in Surat is incomplete without hot Desi Ghee Jalebi and Bhavnagari Gathiya from Shree
+                Umiya! Their quick WhatsApp delivery made breakfast so convenient."
+              </p>
+              <div class="test-user">
+                Dharmesh Shah <span>· Adajan, Surat (Regular Customer)</span>
+              </div>
+            </div>
+
+            <div class="testimonial-mini-card">
+              <div class="test-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                  class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="test-quote">
+                "Their Kesar Shrikhand (Matho) and Cold Cocoa are truly legendary. Perfect thickness, balanced
+                sweetness, and extremely hygienic packaging. Highly recommended!"
+              </p>
+              <div class="test-user">
+                Pooja Ben Desai <span>· Varachha, Surat (Verified Buyer)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block-media-col">
+          <div class="block-media-wrap">
+            <img src="Sweets_images/Rasgulla.jpg" alt="Bengali Sweet Delicacies" class="block-media-img">
+          </div>
+        </div>
+      </div>
+
+      <!-- Block 3: Bulk Order Information (Text Left, Image Right) -->
+      <div class="alternating-block" id="bulk-orders">
+        <div class="block-text-col">
+          <span class="block-pretitle">Celebrations & Corporate</span>
+          <h2 class="block-title">Wedding & Corporate Bulk Orders</h2>
+          <p class="block-desc">
+            Elevate your grand weddings, Diwali festivities, and corporate milestones with personalized royal mithai
+            boxes and gift hampers handcrafted with 100% pure desi cow ghee.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--text-dark);">
+              <i class="fas fa-check-circle" style="color: var(--gold-dark);"></i>
+              <span>Custom gift box branding with your family name or company logo</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--text-dark);">
+              <i class="fas fa-check-circle" style="color: var(--gold-dark);"></i>
+              <span>Special wholesale tiered volume discounts starting from 50 boxes</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--text-dark);">
+              <i class="fas fa-check-circle" style="color: var(--gold-dark);"></i>
+              <span>Scheduled fresh batch delivery directly to venues across Surat & Gujarat</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--text-dark);">
+              <i class="fas fa-check-circle" style="color: var(--gold-dark);"></i>
+              <span>Complimentary sample tasting sessions for wedding planners</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+            <button class="btn btn-gold"
+              onclick="window.open('https://wa.me/917878162112?text=Hello%20Shree%20Umiya%20Sweets,%20I%20would%20like%20to%20inquire%20about%20a%20Bulk%20Order%20for%20Wedding/Corporate', '_blank')">
+              <i class="fab fa-whatsapp"></i> Inquire on WhatsApp
+            </button>
+            <a href="tel:+917878162112" class="btn btn-outline-gold"
+              style="color: var(--primary-deep-maroon); border-color: var(--gold-primary);">
+              <img src="Sweets_images/call3.png" alt="Call" class="call-icon-img"> Call: +91 78781 62112 / +91 99258
+              62112
+            </a>
+          </div>
+        </div>
+
+        <div class="block-media-col">
+          <div class="block-media-wrap">
+            <img src="Sweets_images/sandwich-katli.jpg" alt="Bulk Wedding Sweet Box Hamper" class="block-media-img">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       7. FOOTER SECTION
+       ========================================================================== -->
+  <footer class="main-footer" id="contact">
+    <div class="container">
+      <div class="footer-top-grid">
+
+        <!-- Column 1: Brand Info & Social -->
+        <div>
+          <h3 class="footer-logo-title">Shree Umiya <span class="gold-accent">Sweets & Snacks</span></h3>
+          <p class="footer-tagline">"The Real Taste of Indian Sweets"</p>
+          <p class="footer-about-text">
+            Surat's trusted destination for handcrafted pure desi cow ghee sweets, authentic Gujarati farsan, festive
+            celebration gift boxes, and fresh dairy treats since generations.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/shreeumiyasweetsandsnacks?stkn=MWpzdGM0aTM4NXkzbQ==" target="_blank"
+              rel="noopener noreferrer" class="social-link" title="Instagram" aria-label="Instagram"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link"
+              title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/917878162112" target="_blank" rel="noopener noreferrer" class="social-link"
+              title="WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Navigation Links -->
+        <div>
+          <h4 class="footer-column-title">Quick Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home Showcase</a></li>
+            <li><a href="#intro">About Heritage</a></li>
+            <li><a href="#products">Best Sellers Products</a></li>
+            <li><a href="#categories">Featured Categories</a></li>
+            <li><a href="#new-arrivals">New Seasonal Arrivals</a></li>
+            <li><a href="#outlets">Surat Store Outlets</a></li>
+            <li><a href="#reviews">Customer Reviews</a></li>
+            <li><a href="#bulk-orders">Bulk Wedding Orders</a></li>
+            <li><a href="#menu">Master Product Menu</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Customer Care & Policies -->
+        <div>
+          <h4 class="footer-column-title">Customer Care & Policies</h4>
+          <ul class="footer-links-list">
+            <li><a href="#menu">Track Your Order</a></li>
+            <li><a href="#contact">Surat Delivery Policy (60-90 Mins)</a></li>
+            <li><a href="#contact">100% Pure Vegetarian Policy</a></li>
+            <li><a href="#contact">Hygiene & Food Safety Standards</a></li>
+            <li><a href="#contact">Terms of Service & Privacy Policy</a></li>
+            <li><a href="#contact">FSSAI License: 10718024000123</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Information & Location -->
+        <div>
+          <h4 class="footer-column-title">Contact & Location</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marked-alt"></i>
+            <div>
+              <strong>Shree Umiya Sweets and Snacks</strong><br>
+              Shop No. B-12, VIP Galleria, Althan-Bhimrad Canal Road, Althan, Surat – 395007
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <img src="Sweets_images/call3.png" alt="Call" class="call-icon-img">
+            <div>
+              <strong>Helpline / Delivery:</strong><br>
+              <a href="tel:+917878162112" style="color: inherit; text-decoration: none;">+91 78781 62112</a> /
+              <a href="tel:+919925862112" style="color: inherit; text-decoration: none;">+91 99258 62112</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Direct Email:</strong><br>
+              <a href="mailto:shreeumiyasweetsandsnacks12@gmail.com"
+                style="color: var(--gold-light); text-decoration: none;">shreeumiyasweetsandsnacks12@gmail.com</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Store Timings:</strong><br>
+              Monday – Sunday: 7:00 AM – 10:00 PM (Daily)
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 <strong>Shree Umiya Sweets and Snacks</strong>. All Rights Reserved. Crafted with pure love & desi
+          ghee.</p>
+        <p><i class="fas fa-shield-alt"></i> 100% Pure Vegetarian | FSSAI Lic No: 10718024000123 | Surat, Gujarat</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- ==========================================================================
+       FESTIVAL WELCOME POPUP MODAL (popup2.jpeg)
+       ========================================================================== -->
+  <div class="modal-overlay" id="welcomePopupOverlay"></div>
+  <div class="welcome-popup-modal" id="welcomePopupModal" role="dialog" aria-modal="true" aria-label="Festive Greetings">
+    <button class="welcome-popup-close" id="closeWelcomePopupBtn" aria-label="Close Popup">✕</button>
+    <div class="welcome-popup-content">
+      <img src="Sweets_images/popup_3.jpg" alt="Happy Ganesh Chaturthi - Shree Umiya Sweets & Snacks" class="welcome-popup-img">
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       12. INTERACTIVE SEARCH MODAL & OVERLAY
+       ========================================================================== -->
+  <div class="modal-overlay" id="searchOverlay"></div>
+  <div class="search-modal" id="searchModal" role="dialog" aria-label="Product Search">
+    <div class="search-modal-header">
+      <i class="fas fa-search search-icon-input" aria-hidden="true"></i>
+      <div class="search-input-wrapper">
+        <input type="text" class="search-input-field" id="searchInputModal"
+          placeholder="Search sweets, namkeens, hampers... (e.g. Kaju, Peda, Jalebi)" autocomplete="off">
+        <button class="search-clear-btn" id="clearSearchInputBtn" aria-label="Clear Search" title="Clear Search" style="display: none;">✕</button>
+      </div>
+      <button class="close-modal-x" id="closeSearchBtn" aria-label="Close Search" title="Close Search (Esc)">✕</button>
+    </div>
+    <div class="search-results-area">
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;" id="searchResultCount">Popular
+        Searches</p>
+      <div id="searchResultsContainer"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       13. USER ACCOUNT LOGIN / SIGNUP MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="authOverlay"></div>
+  <div class="auth-modal" id="authModal" role="dialog" aria-label="User Account">
+    <div class="auth-header">
+      <button class="close-modal-x" id="closeAuthBtn" style="color: #FFF; background: rgba(255,255,255,0.2);"
+        aria-label="Close">✕</button>
+      <h3 class="auth-title">Shree Umiya Sweets</h3>
+      <p class="auth-subtitle">Sign in to track orders, save delivery addresses & earn sweet points</p>
+    </div>
+
+    <div class="auth-tabs">
+      <button class="auth-tab-btn active" id="tabLoginBtn">Login</button>
+      <button class="auth-tab-btn" id="tabRegisterBtn">Create Account</button>
+    </div>
+
+    <div class="auth-body">
+      <div id="authErrorMessage"
+        style="display: none; color: var(--primary-red); font-size: 0.8rem; margin-bottom: 12px; font-weight: 600;">
+      </div>
+
+      <!-- Login Form Section -->
+      <div id="loginFormSection">
+        <form id="loginForm">
+          <div class="form-group">
+            <label class="form-label" for="loginIdentifier">Mobile Number or Email</label>
+            <input type="text" class="form-input" id="loginIdentifier" placeholder="e.g. 78781 62112" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="loginPassword">Password</label>
+            <input type="password" class="form-input" id="loginPassword" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100" style="padding: 12px;">Sign In</button>
+        </form>
+
+        <div class="demo-login-box">
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">For quick testing:</p>
+          <button type="button" class="btn btn-gold w-100" id="demoLoginBtn" style="padding: 8px; font-size: 0.82rem;">
+            1-Click Demo Login (Rameshbhai)
+          </button>
+        </div>
+      </div>
+
+      <!-- Register Form Section -->
+      <div id="registerFormSection" style="display: none;">
+        <form id="registerForm">
+          <div class="form-group">
+            <label class="form-label" for="regName">Full Name</label>
+            <input type="text" class="form-input" id="regName" placeholder="e.g. Rajesh Patel" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regPhone">Mobile Number (For Surat Delivery)</label>
+            <input type="tel" class="form-input" id="regPhone" placeholder="10-digit mobile number" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regEmail">Email Address (Optional)</label>
+            <input type="email" class="form-input" id="regEmail" placeholder="yourname@gmail.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="regPassword">Create Password</label>
+            <input type="password" class="form-input" id="regPassword" placeholder="Minimum 6 characters" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100" style="padding: 12px;">Register & Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       14. QUICK VIEW MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="quickViewOverlay"></div>
+  <div class="quick-view-modal" id="quickViewModal" role="dialog" aria-label="Product Quick View">
+    <button class="close-modal-x" id="closeQuickViewBtn" aria-label="Close">✕</button>
+    <div id="quickViewBody"></div>
+  </div>
+
+
+
+
+  <!-- ==========================================================================
+       17. FIXED BOTTOM QUICK BAR (MOBILE)
+       ========================================================================== -->
+  <nav class="mobile-bottom-bar" aria-label="Quick Mobile Navigation">
+    <div class="bottom-bar-grid">
+      <a href="#home" class="bottom-bar-item active">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="#menu" class="bottom-bar-item" onclick="window.app.setCategory('all')">
+        <i class="fas fa-th-large"></i>
+        <span>Menu</span>
+      </a>
+      <button class="bottom-bar-item open-search-btn">
+        <i class="fas fa-search"></i>
+        <span>Search</span>
+      </button>
+
+      <button class="bottom-bar-item auth-trigger-btn">
+        <i class="fas fa-user"></i>
+        <span>Account</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       SCRIPTS
+       ========================================================================== -->
+  <script src="js/products-data.js"></script>
+
+  <script src="js/auth.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
