@@ -1208,9 +1208,27 @@
     width: 100%;
     max-width: 100%;
     height: auto;
-    max-height: 75vh;
-    border-radius: 10px;
+    max-height: calc(74vh - 32px);
+    border-radius: 10px 10px 0 0;
     object-fit: contain;
+  }
+
+  .popup-marquee-wrap {
+    padding: 6px 0;
+  }
+
+  .popup-marquee-text {
+    font-size: 0.74rem;
+    letter-spacing: 0.4px;
+  }
+
+  .popup-marquee-sep {
+    font-size: 0.65rem;
+  }
+
+  .popup-marquee-group {
+    gap: 12px;
+    padding-right: 12px;
   }
 
   .welcome-popup-close {

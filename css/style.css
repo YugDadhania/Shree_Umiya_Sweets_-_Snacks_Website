@@ -2867,8 +2867,7 @@ background-color: #E8D4B0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.92);
-  width: auto;
-  max-width: 94vw;
+  width: min(680px, 92vw);
   max-height: 92vh;
   background: transparent;
   z-index: 1002;
@@ -2891,24 +2890,83 @@ background-color: #E8D4B0;
 
 .welcome-popup-content {
   position: relative;
+  width: 100%;
+  max-width: 680px;
   background: #2B0308;
   border: 3px solid var(--gold-primary);
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.8), 0 0 35px rgba(212, 175, 55, 0.45);
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 .welcome-popup-img {
   display: block;
   width: 100%;
-  max-width: 680px;
-  max-height: 80vh;
+  height: auto;
+  max-height: calc(82vh - 40px);
   object-fit: contain;
-  border-radius: 1px;
+  border-radius: 15px 15px 0 0;
   user-select: none;
+}
+
+/* Dedicated Scrolling Welcome Marquee inside Popup */
+.popup-marquee-wrap {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  background: linear-gradient(90deg, #240206 0%, #44040F 35%, #5C0815 50%, #44040F 65%, #240206 100%);
+  border-top: 1.5px solid var(--gold-primary);
+  padding: 8px 0;
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.popup-marquee-track {
+  display: flex;
+  flex-shrink: 0;
+  width: max-content;
+  animation: popupMarqueeScroll 22s linear infinite;
+  will-change: transform;
+}
+
+.popup-marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 16px;
+  padding-right: 16px;
+  white-space: nowrap;
+}
+
+.popup-marquee-text {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: #F8ECD5;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.popup-marquee-sep {
+  color: var(--gold-primary);
+  font-size: 0.72rem;
+  opacity: 0.95;
+  text-shadow: 0 0 6px rgba(212, 175, 55, 0.7);
+}
+
+@keyframes popupMarqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .welcome-popup-close {
@@ -2957,9 +3015,27 @@ background-color: #E8D4B0;
     width: 100%;
     max-width: 100%;
     height: auto;
-    max-height: 75vh;
-    border-radius: 10px;
+    max-height: calc(75vh - 32px);
+    border-radius: 10px 10px 0 0;
     object-fit: contain;
+  }
+
+  .popup-marquee-wrap {
+    padding: 6px 0;
+  }
+
+  .popup-marquee-text {
+    font-size: 0.74rem;
+    letter-spacing: 0.4px;
+  }
+
+  .popup-marquee-sep {
+    font-size: 0.65rem;
+  }
+
+  .popup-marquee-group {
+    gap: 12px;
+    padding-right: 12px;
   }
 
   .welcome-popup-close {
