@@ -1006,8 +1006,6 @@ const PRODUCTS_DATA = [
       { label: "1 kg", price: 300 }
     ]
   },
-
-  ,
   {
     id: "Khatta-Meetha-Mixture",
     name: "Khatta-Meetha Mixture",
@@ -1047,9 +1045,9 @@ const PRODUCTS_DATA = [
     shelfLife: "Consume within 24 Hours",
     pureVeg: true,
     weightOptions: [
-      { label: "250g (Hot)", price: 130 },
-      { label: "500g (Hot)", price: 260 },
-      { label: "1 kg (Hot)", price: 520 }
+      { label: "250gm", price: 130 },
+      { label: "500gm", price: 260 },
+      { label: "1 kg", price: 520 }
     ]
   },
   {
@@ -1068,14 +1066,14 @@ const PRODUCTS_DATA = [
     shelfLife: "Consume Same Day",
     pureVeg: true,
     weightOptions: [
-      { label: "250g (With Chutney)", price: 60 },
-      { label: "500g (With Chutney)", price: 120 },
-      { label: "1 kg (Family Pack)", price: 240 }
+      { label: "250gm", price: 60 },
+      { label: "500gm", price: 120 },
+      { label: "1 kg", price: 240 }
     ]
   },
   {
     id: "Punjabi Samosa",
-    name: "Punjabi Samosa (4 Pcs)",
+    name: "Punjabi Samosa (2 Pcs)",
     gujaratiName: "પંજાબી સમોસા",
     category: "live-snacks",
     categoryLabel: "Live Snacks",
@@ -1089,7 +1087,7 @@ const PRODUCTS_DATA = [
     shelfLife: "Consume Hot / Within 5 Hours",
     pureVeg: true,
     weightOptions: [
-      { label: "Plate (2 Pcs)", price: 40 }
+      { label: "2Pcs", price: 40 }
     ]
   },
   {
@@ -1389,7 +1387,7 @@ const PRODUCTS_DATA = [
 
 // Helper to look up product by ID
 function getProductById(id) {
-  return PRODUCTS_DATA.find(p => p.id === id);
+  return PRODUCTS_DATA.find(p => p && p.id === id);
 }
 
 // Category metadata

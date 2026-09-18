@@ -298,13 +298,18 @@ class AppController {
 
 
 
-  // 4. WhatsApp Direct Ordering
   orderOnWhatsApp(productId) {
     const product = getProductById(productId);
     if (!product) return;
 
-    const weightIndex = this.selectedProductWeights[productId] || 0;
+    const isQuickView = this.currentQuickViewProduct && this.currentQuickViewProduct.id === productId;
+    const weightIndex = isQuickView 
+      ? this.currentQuickViewWeightIndex 
+      : (this.selectedProductWeights[productId] || 0);
     const opt = product.weightOptions[weightIndex] || product.weightOptions[0];
+    const qty = isQuickView ? (this.currentQuickViewQty || 1) : 1;
+    const basePrice = Number(opt.price) || 0;
+    const totalPrice = basePrice * qty;
 
     const phoneNumber = "917878162112";
     const text = encodeURIComponent(
@@ -312,7 +317,8 @@ class AppController {
       `Hello! I would like to order:\n` +
       `• *Item:* ${product.name} (${product.gujaratiName})\n` +
       `• *Pack Size:* ${opt.label}\n` +
-      `• *Price:* ₹${opt.price}\n\n` +
+      `• *Quantity:* ${qty}\n` +
+      `• *Price:* ₹${totalPrice}\n\n` +
       `Please let me know availability and delivery time across Surat. Thank you!`
     );
 
@@ -695,8 +701,13 @@ class AppController {
             </div>
           </div>
 
-          <!-- WhatsApp Order -->
+          <!-- WhatsApp Order & Quantity -->
           <div class="qv-actions-row">
+            <div class="qv-qty-selector">
+              <button type="button" class="qv-qty-btn" onclick="window.app.changeQuickViewQty(-1)" aria-label="Decrease quantity">−</button>
+              <span class="qv-qty-num" id="quickViewQty">1</span>
+              <button type="button" class="qv-qty-btn" onclick="window.app.changeQuickViewQty(1)" aria-label="Increase quantity">+</button>
+            </div>
             <button class="btn btn-whatsapp qv-wa-btn" onclick="window.app.orderOnWhatsApp('${product.id}')" title="Order on WhatsApp">
               <i class="fab fa-whatsapp"></i> Order on WhatsApp
             </button>
@@ -711,18 +722,50 @@ class AppController {
   }
 
   updateQuickViewWeight(idx) {
-    if (!this.currentQuickViewProduct) return;
+    if (!this.currentQuickViewProduct || !this.currentQuickViewProduct.weightOptions) return;
     this.currentQuickViewWeightIndex = idx;
-    const opt = this.currentQuickViewProduct.weightOptions[idx];
-
-    const priceEl = document.getElementById("qvPriceValue");
-    const weightEl = document.getElementById("qvWeightLabel");
-    if (priceEl) priceEl.textContent = opt.price;
-    if (weightEl) weightEl.textContent = `(${opt.label})`;
+    this.selectedProductWeights[this.currentQuickViewProduct.id] = idx;
 
     document.querySelectorAll(".qv-weight-pill").forEach((pill, i) => {
       pill.classList.toggle("active", i === idx);
     });
+
+    const card = document.getElementById(`product-card-${this.currentQuickViewProduct.id}`);
+    const opt = this.currentQuickViewProduct.weightOptions[idx];
+    if (card && opt) {
+      card.querySelectorAll(".weight-pill").forEach((p, i) => {
+        p.classList.toggle("active", i === idx);
+      });
+      const cardPrice = card.querySelector(`#price-display-${this.currentQuickViewProduct.id}`);
+      if (cardPrice) cardPrice.textContent = opt.price;
+      const unitText = card.querySelector(".unit-text");
+      if (unitText) unitText.textContent = `(${opt.label})`;
+    }
+
+    this.updateQuickViewPrice();
+  }
+
+  changeQuickViewQty(delta) {
+    const newQty = Math.max(1, (this.currentQuickViewQty || 1) + delta);
+    this.currentQuickViewQty = newQty;
+    const qtyEl = document.getElementById("quickViewQty");
+    if (qtyEl) qtyEl.textContent = newQty;
+    this.updateQuickViewPrice();
+  }
+
+  updateQuickViewPrice() {
+    if (!this.currentQuickViewProduct || !this.currentQuickViewProduct.weightOptions) return;
+    const opt = this.currentQuickViewProduct.weightOptions[this.currentQuickViewWeightIndex] || this.currentQuickViewProduct.weightOptions[0];
+    if (!opt) return;
+
+    const basePrice = Number(opt.price) || 0;
+    const qty = Math.max(1, Number(this.currentQuickViewQty) || 1);
+    const totalPrice = basePrice * qty;
+
+    const priceEl = document.getElementById("qvPriceValue");
+    const weightEl = document.getElementById("qvWeightLabel");
+    if (priceEl) priceEl.textContent = totalPrice;
+    if (weightEl) weightEl.textContent = qty > 1 ? `(${opt.label} × ${qty})` : `(${opt.label})`;
   }
 
 

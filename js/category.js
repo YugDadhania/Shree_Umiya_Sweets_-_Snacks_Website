@@ -132,6 +132,9 @@ class CategoryPageController {
     this.subcategory = document.body.dataset.subcategory || (this.category === "sweets" ? this.detectSubcategoryFromPath() : "");
     this.activeSort = "popular";
     this.selectedProductWeights = {};
+    this.currentQuickViewProduct = null;
+    this.currentQuickViewWeightIndex = 0;
+    this.currentQuickViewQty = 1;
     this.init();
   }
 
@@ -284,7 +287,7 @@ class CategoryPageController {
   selectWeight(productId, weightIndex) {
     this.selectedProductWeights[productId] = weightIndex;
     const product = getProductById(productId);
-    if (!product) return;
+    if (!product || !product.weightOptions) return;
 
     const opt = product.weightOptions[weightIndex];
     if (!opt) return;
@@ -302,22 +305,28 @@ class CategoryPageController {
     }
   }
 
-
-
   orderOnWhatsApp(productId) {
     const product = getProductById(productId);
     if (!product) return;
 
-    const weightIndex = this.selectedProductWeights[productId] || 0;
+    const isQuickView = this.currentQuickViewProduct && this.currentQuickViewProduct.id === productId;
+    const weightIndex = isQuickView 
+      ? this.currentQuickViewWeightIndex 
+      : (this.selectedProductWeights[productId] || 0);
     const opt = product.weightOptions[weightIndex] || product.weightOptions[0];
+    const qty = isQuickView ? (this.currentQuickViewQty || 1) : 1;
+    const basePrice = Number(opt.price) || 0;
+    const totalPrice = basePrice * qty;
 
     const phoneNumber = "917878162112";
+    const sectionName = this.subcategory || (CATEGORY_METADATA[this.category] ? CATEGORY_METADATA[this.category].name : "Bakery Products");
     const text = encodeURIComponent(
       `*Shree Umiya Sweets and Snacks - Order Inquiry*\n\n` +
-      `Hello! I would like to order from the *${this.subcategory}* section:\n` +
+      `Hello! I would like to order from the *${sectionName}* section:\n` +
       `• *Item:* ${product.name} (${product.gujaratiName})\n` +
       `• *Pack Size:* ${opt.label}\n` +
-      `• *Price:* ₹${opt.price}\n\n` +
+      `• *Quantity:* ${qty}\n` +
+      `• *Price:* ₹${totalPrice}\n\n` +
       `Please confirm availability and delivery across Surat. Thank you!`
     );
 
@@ -469,10 +478,11 @@ class CategoryPageController {
 
   openQuickView(productId) {
     const product = getProductById(productId);
-    if (!product) return;
+    if (!product || !product.weightOptions || !product.weightOptions.length) return;
 
     this.currentQuickViewProduct = product;
     this.currentQuickViewWeightIndex = this.selectedProductWeights[productId] || 0;
+    this.currentQuickViewQty = 1;
 
     const modal = document.getElementById("quickViewModal");
     const overlay = document.getElementById("quickViewOverlay");
@@ -483,7 +493,7 @@ class CategoryPageController {
       ? product.image 
       : `${basePrefix}${product.image}`;
 
-    const opt = product.weightOptions[this.currentQuickViewWeightIndex];
+    const opt = product.weightOptions[this.currentQuickViewWeightIndex] || product.weightOptions[0];
 
     body.innerHTML = `
       <div class="quick-view-grid">
@@ -521,7 +531,12 @@ class CategoryPageController {
               <span class="price-value" id="quickViewPrice">${opt.price}</span>
               <span class="unit-text" id="quickViewUnit">(${opt.label})</span>
             </div>
-            <div style="display: flex; gap: 10px;">
+            <div class="qv-actions-row">
+              <div class="qv-qty-selector">
+                <button type="button" class="qv-qty-btn" onclick="window.categoryApp.changeQuickViewQty(-1)" aria-label="Decrease quantity">−</button>
+                <span class="qv-qty-num" id="quickViewQty">1</span>
+                <button type="button" class="qv-qty-btn" onclick="window.categoryApp.changeQuickViewQty(1)" aria-label="Increase quantity">+</button>
+              </div>
               <button class="btn btn-whatsapp" onclick="window.categoryApp.orderOnWhatsApp('${product.id}')">
                 <i class="fab fa-whatsapp"></i> Order on WhatsApp
               </button>
@@ -539,13 +554,51 @@ class CategoryPageController {
   }
 
   setQuickViewWeight(weightIndex) {
+    if (!this.currentQuickViewProduct || !this.currentQuickViewProduct.weightOptions) return;
     this.currentQuickViewWeightIndex = weightIndex;
-    const opt = this.currentQuickViewProduct.weightOptions[weightIndex];
-    document.getElementById("quickViewPrice").textContent = opt.price;
-    document.getElementById("quickViewUnit").textContent = `(${opt.label})`;
+    this.selectedProductWeights[this.currentQuickViewProduct.id] = weightIndex;
+
     document.querySelectorAll("#quickViewModal .weight-pill").forEach((p, idx) => {
       p.classList.toggle("active", idx === weightIndex);
     });
+
+    // Synchronize price and pack label on product card if on page
+    const card = document.getElementById(`product-card-${this.currentQuickViewProduct.id}`);
+    const opt = this.currentQuickViewProduct.weightOptions[weightIndex];
+    if (card && opt) {
+      card.querySelectorAll(".weight-pill").forEach((p, idx) => {
+        p.classList.toggle("active", idx === weightIndex);
+      });
+      const cardPrice = card.querySelector(`#price-display-${this.currentQuickViewProduct.id}`);
+      if (cardPrice) cardPrice.textContent = opt.price;
+      const unitText = card.querySelector(".unit-text");
+      if (unitText) unitText.textContent = `(${opt.label})`;
+    }
+
+    this.updateQuickViewPrice();
+  }
+
+  changeQuickViewQty(delta) {
+    const newQty = Math.max(1, (this.currentQuickViewQty || 1) + delta);
+    this.currentQuickViewQty = newQty;
+    const qtyEl = document.getElementById("quickViewQty");
+    if (qtyEl) qtyEl.textContent = newQty;
+    this.updateQuickViewPrice();
+  }
+
+  updateQuickViewPrice() {
+    if (!this.currentQuickViewProduct || !this.currentQuickViewProduct.weightOptions) return;
+    const opt = this.currentQuickViewProduct.weightOptions[this.currentQuickViewWeightIndex] || this.currentQuickViewProduct.weightOptions[0];
+    if (!opt) return;
+
+    const basePrice = Number(opt.price) || 0;
+    const qty = Math.max(1, Number(this.currentQuickViewQty) || 1);
+    const totalPrice = basePrice * qty;
+
+    const priceEl = document.getElementById("quickViewPrice");
+    const unitEl = document.getElementById("quickViewUnit");
+    if (priceEl) priceEl.textContent = totalPrice;
+    if (unitEl) unitEl.textContent = qty > 1 ? `(${opt.label} × ${qty})` : `(${opt.label})`;
   }
 
 

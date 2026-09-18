@@ -3177,11 +3177,20 @@ background-color: #E8D4B0;
   padding: 10px 14px;
   background: var(--bg-cream);
   font-weight: 700;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--transition-fast);
+}
+
+.qv-qty-btn:hover {
+  background: var(--gold-pale);
 }
 
 .qv-qty-num {
   padding: 0 14px;
   font-weight: 700;
+  user-select: none;
 }
 
 /* ==========================================================================
